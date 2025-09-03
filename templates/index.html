@@ -1,5 +1,13 @@
 {% extends "base.html" %} {% block content %}
 
+<h1>My Notes</h1>
+{% for note in notes %}
+<div>{{ note.title }}</div>
+{% endfor %} {%endblock%} {%block aside%}
+
+<p>Ini Aside!</p>
+
+{%endblock%} {% comment %}
 <h3>My List Hobbies</h3>
 <div>
   {% if not hobbies %}
@@ -10,14 +18,9 @@
 </div>
 <ul>
   {% for my_hobbies in hobbies %}
-  <li>{{ my_hobbies }}</li>
+  <li>{% include "components/hobby-card.html" with my_hobbies=my_hobbies %}</li>
   {% endfor %}
   <!-- hobbies adalah nama list yang dikirim dari view.
   my_hobbies adalah variabel untuk setiap item saat perulangan. -->
 </ul>
-
-{%endblock%} {%block aside%}
-
-<p>Ini Aside!</p>
-
-{%endblock%}
+{% endcomment %}
