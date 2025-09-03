@@ -1,0 +1,4 @@
+Template tags
+
+1. {% %} -> for programming logic
+2. {{ }} -> for displaying variables
