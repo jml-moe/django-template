@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <h1 class="text-2xl font-bold">Hello Django!</h1>
+    </header>
+    <main class="flex flex-col md:flex-row w-full min-h-screen">
+        <section class="flex-grow p-6 bg-white">
+            {% block content %}
+            <!-- Main Content -->
+            {% endblock %}
+        </section>
+        <aside class="p-4 bg-gray-100 md:w-1/4">
+            {% block aside %}
+            <!-- Sidebar content -->
+            {% endblock %}
+        </aside>
+    </main>
+
+</body>
+
+</html>

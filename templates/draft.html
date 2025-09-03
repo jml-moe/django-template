@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Hello Django!</h1>
+      <!-- <h3>{{ username }} - {{ email }}</h3> -->
+      <!-- diambil dari context yg ada di view -->
+
+      <h3>My List Hobbies</h3>
+      <div>
+        {% if not hobbies %}
+        <h3>There's no hobbies</h3>
+        {% else %}
+        <h3>Here's ur hobbies</h3>
+        {% endif %}
+      </div>
+      <ul>
+        {% for my_hobbies in hobbies %}
+        <li>{{ my_hobbies }}</li>
+        {% endfor %}
+      </ul>
+      <!-- hobbies adalah nama list yang dikirim dari view.
+        my_hobbies adalah variabel untuk setiap item saat perulangan. -->
+    </main>
+  </body>
+</html>

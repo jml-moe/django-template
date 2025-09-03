@@ -1,3 +1,12 @@
+# Bikin App
+
+1. Start from view
+2. Buat Template
+3. Buat URL Dispatcher 
+4. Register urls.py ke core urls
+5. Buat model di models.py
+6. Register Model ke admin.py
+
 Template tags
 
 1. {% %} -> for programming logic

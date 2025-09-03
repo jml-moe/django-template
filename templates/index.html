@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+
+<h3>My List Hobbies</h3>
+<div>
+  {% if not hobbies %}
+  <h3>There's no hobbies</h3>
+  {% else %}
+  <h3>Here's ur hobbies</h3>
+  {% endif %}
+</div>
+<ul>
+  {% for my_hobbies in hobbies %}
+  <li>{{ my_hobbies }}</li>
+  {% endfor %}
+  <!-- hobbies adalah nama list yang dikirim dari view.
+  my_hobbies adalah variabel untuk setiap item saat perulangan. -->
+</ul>
+
+{%endblock%} {%block aside%}
+
+<p>Ini Aside!</p>
+
+{%endblock%}
